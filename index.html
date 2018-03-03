@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+	
+		<title>Prefer closures to strings</title>
+		<meta charset = "UTF-8">
+	
+	</head>
+	
+	
+	<!--
+		NOTE:
+		===============================================================================================
+		
+		Because of simplicity & demonstration purposes, the "style" attribute is used within html tags.
+		Nevertheless it is recommended to use CSS for styling.
+		
+		'<option value="" disabled selected>' simulates a placeholder for the drop list
+		
+		In '<body>' the 'style="text-align:center;"' 
+		centers similar like the tag '<center>' which was used in the previous mini-projects.
+		
+		Some tag attributes are put into new lines, to keep them more visible.
+		
+		===============================================================================================
+	-->
+	
+	
+	<body style="text-align:center;">
+	
+		<h1>Simple Benchmark</h1>
+		
+		<span>Steps in pixel
+		
+			<input class="user-input" type="number" value="10" style="margin-right:10px;">
+			
+		</span>
+		
+		
+		<span>Number of iterations
+		
+			<input class="user-input" type="number" value="3" style="margin-right:10px;">
+			
+		</span>
+		
+		
+		<span>Time in milliseconds
+		
+			<input class="user-input" type="number" value="1000">
+			
+		</span>
+		
+		<br>
+		<br>
+	
+		<div>
+		
+			<button id="button-stop" type="button" onclick="Stop()">STOP</button>
+			
+		</div>
+
+		<br>
+		<br>
+	
+		<!--
+		style attribute "width" collides with "text-align:center". 
+		Fixing works with margin-left and right
+		-->
+		<section style="border: 2px solid black; 
+						width:50%; 
+						margin-left:auto;
+						margin-right:auto;" 
+				 class="container" >
+		
+			<div >
+			
+				<h2>String Version</h2>
+				
+				
+				
+				<div id="testarea-one" 
+					 style="margin-left:auto;
+							margin-right:auto;
+							width:1px; 
+							height:1px; 
+							background-color: rgb(0,0,0);"></div>
+
+
+				<br>
+				
+				<button style="border:none; background-color:green; width:50px;" onclick="Ugly_Benchmark()">
+				
+					GO (Ugly)
+					
+				</button>
+				
+				<button style="border:none; background-color:orange; width:50px;" onclick="Bad_Benchmark()">
+				
+					GO (Bad)
+					
+				</button>
+			
+				<div id="result-string"></div>
+				
+			</div>
+			
+			
+			
+			<div>
+			
+				<h2>Function Version</h2>
+				
+				<div id="testarea-two"
+					 style="margin-left:auto;
+							margin-right:auto;
+							width:1px; 
+							height:1px; 
+							background-color: rgb(0,0,0);"></div>
+
+
+				<br>
+				
+				
+				<button style="border:none; background-color:green; width:50px;" 
+						onclick="Good_Benchmark('two')">
+				
+					GO (Good)
+					
+				</button>
+				
+				
+				<div id="result-function"></div>
+				
+				<br>
+				
+			</div>
+			
+		</section>
+		
+		
+		<section>
+		
+			<br>
+			<br>
+			For more explanation please visit - 
+			<a href = "https://github.com/Incrementis/Javascript-variable-hoisting-/wiki"> 
+			Prefer closures to strings Wiki</a>
+			
+		</section>
+		
+
+	</body>
+
+	<footer>
+	
+		<script language = "javascript" type = "text/javascript" src = "benchmark.js"></script> 
+	
+	</footer>
+
+</html>
