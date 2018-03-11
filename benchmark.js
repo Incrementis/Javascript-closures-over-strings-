@@ -26,14 +26,14 @@
 //Purpose: Gives access to user given inputs and globaly needed variables
 var Variables =
 {
-	inSteps: document.getElementsByClassName('user-input')[0],		//For getting steps in pixel
+	inSteps: document.getElementsByClassName('user-input')[0],	//For getting steps in pixel
 	inIteration: document.getElementsByClassName('user-input')[1],	//For getting number of iteration
-	inTime: document.getElementsByClassName('user-input')[2],		//For getting time in milliseconds
-	stringResults: document.getElementById('result-string'),		//For showing the result in web browser
+	inTime: document.getElementsByClassName('user-input')[2],	//For getting time in milliseconds
+	stringResults: document.getElementById('result-string'),	//For showing the result in web browser
 	functionResults: document.getElementById('result-function'),	//For showing the result in web browser
-	Square: 0,														//For getting pixel attributes
-	Animation: 0,													//For starting and stopping animation
-	Counter: 0														//For checking number of iteration
+	Square: 0,							//For getting pixel attributes
+	Animation: 0,							//For starting and stopping animation
+	Counter: 0							//For checking number of iteration
 }
 
 
@@ -44,8 +44,8 @@ function Stop()
 	clearTimeout(Variables.Animation);
 	
 	
-	Variables.Counter = 0;
-	Variables.Square.width = "1px";
+	Variables.Counter 	= 0;
+	Variables.Square.width 	= "1px";
 	Variables.Square.height = "1px";
 }
 
@@ -79,8 +79,7 @@ function Rise_of_Square(num, start, end)
 	//It is the inner width of the whole browser window 
 	var container  	= window.innerWidth;
 	
-	//This is needed to define the maximum width area in which 
-	//the pixel/rectangle/square is allowed to grow
+	//This is needed to define the maximum width area in which the pixel/rectangle/square is allowed to grow
 	var border		= ((+container)/2)-20;
 	
 	//Random color values
@@ -184,7 +183,7 @@ function Bad_Benchmark()
 {
 
 	var badStart 	= [];
-	var badEnd 		= [];
+	var badEnd 	= [];
 
 	Variables.stringResults.innerHTML = "Please press [F12] in google chrome to see the error in the console.";
 	
@@ -206,8 +205,8 @@ function Bad_Benchmark()
 function Good_Benchmark(num)
 {
 	
-	var goodStart = [];
-	var goodEnd = [];
+	var goodStart 	= [];
+	var goodEnd 	= [];
 	
 	Rise_of_Square(num, goodStart, goodEnd);
 	
